@@ -132,14 +132,28 @@ $obj3->class3Func();
 
 <?php
 
-$password = "piza";
-$hash = password_hash($password, PASSWORD_DEFAULT);
-if (password_verify("piza", $hash)) {
 
-    echo "Welcome, paswords matched";
+$server = "localhost";
+$user = "root";
+$password = "";
+$name = "mydatabase";
+
+if (mysqli_connect($server, $user, $password, $name)) {
+    echo "Connected successfully!";
 } else {
-    echo "Passwords do not match. Please try again";
+    echo "Couldn't connect";
 }
+
+
+
+// $password = "piza";
+// $hash = password_hash($password, PASSWORD_DEFAULT);
+// if (password_verify("piza", $hash)) {
+
+//     echo "Welcome, paswords matched";
+// } else {
+//     echo "Passwords do not match. Please try again";
+// }
 
 
 // if ($_SERVER["REQUEST_METHOD"] == "POST") {
