@@ -8,9 +8,6 @@ if (isset($_POST["logout"])) {
 }
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
