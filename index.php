@@ -136,11 +136,14 @@ $obj3->class3Func();
 $server = "localhost";
 $user = "root";
 $password = "";
-$name = "mydatabase";
+$name = "mydatabas";
 
-if (mysqli_connect($server, $user, $password, $name)) {
-    echo "Connected successfully!";
-} else {
+try {
+    $conn = mysqli_connect($server, $user, $password, $name);
+    if ($conn) {
+        echo "Connected successfully";
+    }
+} catch (mysqli_sql_exception) {
     echo "Couldn't connect";
 }
 
