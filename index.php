@@ -136,7 +136,7 @@ $obj3->class3Func();
 $server = "localhost";
 $user = "root";
 $password = "";
-$name = "mydatabas";
+$name = "mydatabase";
 
 try {
     $conn = mysqli_connect($server, $user, $password, $name);
