@@ -131,19 +131,9 @@ $obj3->class3Func();
 
 
 <?php
-$server = "localhost";
-$user = "root";
-$password = "";
-$name = "mydatabase";
 
-try {
-    $conn = mysqli_connect($server, $user, $password, $name);
-    if ($conn) {
-        echo "Connected successfully";
-    }
-} catch (mysqli_sql_exception) {
-    echo "Couldn't connect";
-}
+include("database.php");
+
 
 // $password = "piza";
 // $hash = password_hash($password, PASSWORD_DEFAULT);
