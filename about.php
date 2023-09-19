@@ -1,17 +1,16 @@
 <?php
 class firstClass
 {
-    public $z, $x, $y;
-    function getSum()
+    public $z;
+    function setName($z)
     {
-        return $this->z = $this->x + $this->y;
+        return $this->z = $z;
     }
-    function getSub()
+    function getName()
     {
-        return $this->z = $this->x - $this->y;
+        return $this->z;
     }
 }
-$objSum = new firstClass();
-$objSub = new firstClass();
-echo $objSum->getSum() . "<br>";
-echo $objSub->getSub();
+$obj = new firstClass();
+$obj->setname("Afaaq");
+echo $obj->getname();
