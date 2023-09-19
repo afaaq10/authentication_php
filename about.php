@@ -1,16 +1,18 @@
 <?php
 class firstClass
 {
-    public $z;
-    function setName($z)
+    public $z, $y;
+
+    function __construct($a, $p)
     {
-        return $this->z = $z;
+        $this->z = $a;
+        $this->y = $p;
     }
-    function getName()
+
+    function show()
     {
-        return $this->z;
+        echo $this->z . "\n" . $this->y;
     }
 }
-$obj = new firstClass();
-$obj->setname("Afaaq");
-echo $obj->getname();
+$obj = new firstClass("Hello", 24);
+$obj->show();
