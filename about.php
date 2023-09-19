@@ -1,18 +1,27 @@
 <?php
-class firstClass
+class parentClass
 {
     public $z, $y;
-
-    function __construct($a, $p)
+    function __construct($name, $age)
     {
-        $this->z = $a;
-        $this->y = $p;
+        $this->z = $name;
+        $this->y = $age;
+        echo $this->z . "\n" . $this->y . "<br>";
     }
 
-    function show()
+    function getName($n)
     {
-        echo $this->z . "\n" . $this->y;
+        echo $n;
     }
 }
-$obj = new firstClass("Hello", 24);
-$obj->show();
+
+class child extends parentClass
+{
+    function getName($n)
+    {
+        echo $n;
+    }
+}
+
+$obj = new parentClass("Hello", 22);
+$obj->getName(" Majeed");
