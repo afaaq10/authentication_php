@@ -1,27 +1,17 @@
 <?php
-class parentClass
+abstract class parentClass
 {
-    public $z, $y;
-    function __construct($name, $age)
-    {
-        $this->z = $name;
-        $this->y = $age;
-        echo $this->z . "\n" . $this->y . "<br>";
-    }
-
-    function getName($n)
-    {
-        echo $n;
-    }
+    public $n;
+    abstract protected function getName($n);
 }
 
 class child extends parentClass
 {
-    function getName($n)
+    public function getName($n)
     {
         echo $n;
     }
 }
 
-$obj = new parentClass("Hello", 22);
-$obj->getName(" Majeed");
+$obj = new child();
+$obj->getName("Afaaq");
