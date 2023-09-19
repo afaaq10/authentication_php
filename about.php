@@ -1,5 +1,4 @@
 <?php
-
 class firstClass
 {
     public $z, $x, $y;
@@ -14,6 +13,5 @@ class firstClass
 }
 $objSum = new firstClass();
 $objSub = new firstClass();
-
 echo $objSum->getSum() . "<br>";
 echo $objSub->getSub();
