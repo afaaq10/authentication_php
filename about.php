@@ -79,3 +79,27 @@ class derived extends base
 
 $objj = new derived();
 $objj->getAge();
+
+
+
+
+trait first
+{
+    function myFunc()
+    {
+        echo "Hello I am a trait";
+    }
+
+    function myFunc2()
+    {
+        echo "Hello I am a trait2";
+    }
+}
+
+class traitClass
+{
+    use first;
+}
+
+$obj = new traitClass();
+$obj->myFunc2();
