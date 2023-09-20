@@ -132,6 +132,7 @@ echo $obj->myFunc()->myFunc2();
 // __set() is just like set, when you try to set private or undefined property, it gets called.
 
 // __call() is just like get, when you try to get private or undefined method, it gets called.
+// __callStatic() is just like call(), but it is used when instead of creating a new object instance you use static keyword...
 
 class checkMagic
 {
@@ -150,3 +151,34 @@ class checkMagic
 
 $obj = new checkMagic();
 $obj->n = "Hello";
+
+
+class checkStatic
+{
+
+    private static function name()
+    {
+        echo "I am a private function";
+    }
+
+    public static function  __callStatic($method, $args)
+    {
+
+        if (method_exists(__class__, $method)) {
+
+            call_user_func_array([__class__, $method], $args);
+        } else {
+            echo "This property is private ($method)";
+        }
+    }
+}
+
+checkStatic::name();
+
+
+// isset($variablename) is used to check whether a variable is set (returns true or false) or __isset() gets called when a variable which is private or undefined is called or used and we can access that private var in __isset() function...
+// unset($variablename) to destroy a variable..to unset a private property we use __isunset() function which gets called when you try to unsset a provate/undefiend property
+// __toString(), __sleep(), __wakeup()
+// The serialize .....serialize($obj)....... converts an object into an array which can be stored, an object can't be stored directly in database or in file or in sessions in OOps.
+
+// In oops object get copied by refernce not by value...to prvent this we use "clone" keyword to achieve copy by clone for properties
