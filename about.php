@@ -129,7 +129,10 @@ echo $obj->myFunc()->myFunc2();
 
 
 // __get() magic method is called when you try to access a private property or any undefined property.
-// __set() is just like set, when you try to set private or undefined method, it gets called.
+// __set() is just like set, when you try to set private or undefined property, it gets called.
+
+// __call() is just like get, when you try to get private or undefined method, it gets called.
+
 class checkMagic
 {
     private $n = "Afaaq Majeed";
