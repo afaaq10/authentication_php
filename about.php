@@ -126,3 +126,24 @@ echo $obj->myFunc()->myFunc2();
 
 // __autoload() function is used if you have different files having a single class in each(file name should be same as class name).
 // Now if i want to use these two files in one single file, we use __autoload() magic function and then write include with .php extension
+
+
+// __get() magic method is called when you try to access a private property or any undefined property.
+// __set() is just like set, when you try to set private or undefined method, it gets called.
+class checkMagic
+{
+    private $n = "Afaaq Majeed";
+
+    public function  __get($property)
+    {
+        echo "This property is private ($property)";
+    }
+
+    public function  __set($property, $value)
+    {
+        echo "This property is private ($property) ($value)";
+    }
+}
+
+$obj = new checkMagic();
+$obj->n = "Hello";
