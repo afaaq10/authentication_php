@@ -104,7 +104,6 @@ class traitClass
 $obj = new traitClass();
 $obj->myFunc2();
 
-
 // Method chaining..................
 // Use the "return $this" for method chaining 
 class myChain
