@@ -123,5 +123,6 @@ class myChain
 $obj = new myChain();
 echo $obj->myFunc()->myFunc2();
 
+
 // __autoload() function is used if you have different files having a single class in each(file name should be same as class name).
 // Now if i want to use these two files in one single file, we use __autoload() magic function and then write include with .php extension
