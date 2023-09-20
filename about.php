@@ -82,7 +82,7 @@ $objj->getAge();
 
 
 
-
+// Playing around with the traits............................................
 trait first
 {
     function myFunc()
@@ -103,3 +103,23 @@ class traitClass
 
 $obj = new traitClass();
 $obj->myFunc2();
+
+
+// Method chaining..................
+// Use the "return $this" for method chaining 
+class myChain
+{
+    function myFunc()
+    {
+        echo "Hello I am a func";
+        return $this;
+    }
+
+    function myFunc2()
+    {
+        echo "Hello I am a func2";
+    }
+}
+
+$obj = new myChain();
+echo $obj->myFunc()->myFunc2();
