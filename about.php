@@ -182,3 +182,6 @@ checkStatic::name();
 // The serialize .....serialize($obj)....... converts an object into an array which can be stored, an object can't be stored directly in database or in file or in sessions in OOps.
 
 // In oops object get copied by refernce not by value...to prvent this we use "clone" keyword to achieve copy by clone for properties
+// This is little bit difficult...check again if necessary.
+
+// The rest like CRUD operation using SQL and OOPS haven't been covered....you can check that anytime....
